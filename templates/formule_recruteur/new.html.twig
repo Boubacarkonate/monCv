@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New FormuleRecruteur{% endblock %}
+
+{% block main %}
+    <h1>Create new FormuleRecruteur</h1>
+
+    {{ include('formule_recruteur/_form.html.twig') }}
+
+    <a href="{{ path('app_formule_recruteur_index') }}">back to list</a>
+{% endblock %}

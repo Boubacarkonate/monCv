@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit FormuleRecruteur{% endblock %}
+
+{% block main %}
+    <h1>Edit FormuleRecruteur</h1>
+
+    {{ include('formule_recruteur/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_formule_recruteur_index') }}">back to list</a>
+
+    {{ include('formule_recruteur/_delete_form.html.twig') }}
+{% endblock %}

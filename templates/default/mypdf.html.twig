@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultMypdfController!{% endblock %}
+
+{% block main %}
+
+
+
+ <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ cv.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ cv.nom }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ cv.name }}</td>
+            </tr>
+            <tr>
+                <th>FirstName</th>
+                <td><img src="{{ asset('media/') ~ cv.first_name }}"</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}FormuleRecruteur{% endblock %}
+
+{% block body %}
+    <h1>FormuleRecruteur</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ formule_recruteur.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ formule_recruteur.nom }}</td>
+            </tr>
+            <tr>
+                <th>Forfait</th>
+                <td>{{ formule_recruteur.forfait }}</td>
+            </tr>
+            <tr>
+                <th>Nombre_annonce</th>
+                <td>{{ formule_recruteur.nombreAnnonce }}</td>
+            </tr>
+            <tr>
+                <th>Nombre_cv</th>
+                <td>{{ formule_recruteur.nombreCv }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ formule_recruteur.prix }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_formule_recruteur_index') }}">back to list</a>
+
+    <a href="{{ path('app_formule_recruteur_edit', {'id': formule_recruteur.id}) }}">edit</a>
+
+    {{ include('formule_recruteur/_delete_form.html.twig') }}
+{% endblock %}
